@@ -20,6 +20,8 @@ module.exports = {
   ],
   rules: {
     // 0 false(off), 1 warn, 2 error
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/destructuring-assignment': [0, 'always'],
     'jsx-a11y/alt-text': 0,
     'react/prop-types': 'off',
     'react/jsx-one-expression-per-line': 'off',
