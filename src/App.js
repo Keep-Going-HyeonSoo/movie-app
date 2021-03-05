@@ -11,11 +11,11 @@ class App extends React.Component {
   }
 
   add = () => {
-    console.log('add')
+    this.setState((cur) => ({ count: cur.count + 1 }))
   }
 
   minus = () => {
-    console.log('minus')
+    this.setState((cur) => ({ count: cur.count - 1 }))
   }
 
   render() {
