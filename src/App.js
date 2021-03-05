@@ -3,11 +3,24 @@ import React from 'react'
 
 class App extends React.Component {
   constructor(props) {
+    console.log('constructor() : Start Component Mounting')
     super(props)
 
     this.state = {
       count: 0
     }
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount() : Component finish rendered')
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate() : Finsih Updated')
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount() : Component will Unmount')
   }
 
   add = () => {
@@ -19,6 +32,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log('render() : In rendering')
     return (
       <div>
         <h1>The number is: {this.state.count}</h1>
