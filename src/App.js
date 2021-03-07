@@ -45,7 +45,11 @@ class App extends React.Component {
               <span className='loader__text'>Loading...</span>
             </div>
           )
-          : this.renderMovies(movieList)}
+          : (
+            <div className='movies'>
+              {this.renderMovies(movieList)}
+            </div>
+          )}
       </section>
 
     )
