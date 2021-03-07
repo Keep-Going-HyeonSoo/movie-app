@@ -21,6 +21,7 @@ module.exports = {
   ],
   rules: {
     // 0 false(off), 1 warn, 2 error
+    'no-unused-vars': 1,
     'jsx-quotes': ['error', 'prefer-single'],
     'react/destructuring-assignment': [0, 'always'],
     'jsx-a11y/alt-text': 0,

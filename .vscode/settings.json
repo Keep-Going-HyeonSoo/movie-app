@@ -1,5 +1,5 @@
 {
-	"editor.fontSize": 15,
+	"editor.fontSize": 14,
 	"editor.fontFamily": "Hack, Consolas",
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true
