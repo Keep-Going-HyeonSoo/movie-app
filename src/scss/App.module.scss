@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap");
+
+body {
+  background-color: #e6eef7;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+.container {
+  margin-top: 1rem;
+}
+
+.loader__text {
+  font-size: 5rem;
+  color: lightcoral;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

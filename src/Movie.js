@@ -1,20 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from './scss/Movie.module.scss'
 
 function Movie({
   year, title, summary, poster, genres
 }) {
   return (
-    <div className='movie'>
-      <img src={poster} alt={title} title={title} />
-      <div className='movie__data'>
-        <h3 className='movie__title'>{title}</h3>
-        <h5 className='movie__year'>{year}</h5>
-        <ul className='genres'>
-          {genres.map((genre) => <li key={genre.toString()} className='genres__genre'>{genre}</li>)}
-        </ul>
-        <p className='movie__summary'>{summary}</p>
-      </div>
+    <div className={styles.movie}>
+      <img className={styles.movie__poster} src={poster} alt={title} title={title} />
+      <h3 className={styles.movie__title}>{title} ({year})</h3>
+      <ul className={styles.movie__genres}>
+        {genres.map((genre) => (
+          <li
+            key={genre.toString()}
+            className={styles.movie__genres__genre}
+          >
+            {genre}
+          </li>
+        ))}
+      </ul>
+      <p className={styles.movie__summary}>{summary}</p>
+
     </div>
   )
 }

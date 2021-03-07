@@ -1,0 +1,57 @@
+.movie {
+  display: grid;
+  grid-template-rows: fit-content(10rem) fit-content(10rem) 1fr;
+  grid-template-columns: 1fr 4fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 40rem;
+  margin: 2.5rem 2.5rem;
+  padding: 1.2rem 1.8rem;
+  position: relative;
+  border-radius: 0.3rem;
+  grid-template-areas:
+    "poster title"
+    "poster genres"
+    "poster summary";
+}
+
+.movie:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.movie__poster {
+  grid-area: poster;
+  width: 10rem;
+  height: 16rem;
+  position: relative;
+  top: -2rem;
+}
+
+.movie__title {
+  font-size: 2rem;
+  font-weight: 700;
+  grid-area: title;
+}
+
+.movie__genres {
+  grid-area: genres;
+  font-weight: 500;
+  font-size: 1.1rem;
+
+  li {
+    display: inline-block;
+    margin-right: 0.4rem;
+  }
+
+  li:not(:first-child) {
+    margin-top: 0.4rem;
+  }
+}
+
+.movie__summary {
+  grid-area: summary;
+  line-height: 1.6rem;
+}
