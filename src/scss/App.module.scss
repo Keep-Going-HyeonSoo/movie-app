@@ -1,17 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
+html,
 body {
   background-color: #e6eef7;
-  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
 }
 
 .container {
+  height: 100%;
   margin-top: 1rem;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loader__text {
-  font-size: 5rem;
-  color: lightcoral;
+  font-size: 2rem;
+  color: black;
 }
 
 .movies {

@@ -19,8 +19,11 @@ function Movie({
           </li>
         ))}
       </ul>
-      <p className={styles.movie__summary}>{summary}</p>
-
+      {
+        summary.length > 200
+          ? <p className={styles.movie__summary}>{summary.slice(0, 200)}...</p>
+          : <p className={styles.movie__summary}>{summary}</p>
+      }
     </div>
   )
 }
