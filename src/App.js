@@ -1,60 +1,17 @@
 import React from 'react'
-import axios from 'axios'
-import Movie from './Movie'
-import styles from './scss/App.module.scss'
+import { HashRouter, Route } from 'react-router-dom'
+import Home from './routes/Home'
+import About from './routes/About'
+import Navigation from './components/Navigation'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isLoading: true,
-      movieList: []
-    }
-  }
-
-  componentDidMount() {
-    this.getMovies()
-  }
-
-  getMovies = async () => {
-    const movies = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')
-    this.setState({ movieList: movies.data.data.movies, isLoading: false })
-  }
-
-  renderMovies = (movieList) => (
-    movieList.map((movie) => (
-      <Movie
-        key={movie.id}
-        id={movie.id}
-        year={movie.year}
-        title={movie.title}
-        summary={movie.summary}
-        poster={movie.medium_cover_image}
-        genres={movie.genres}
-      />
-    ))
+function App() {
+  return (
+    <HashRouter>
+      <Navigation />
+      <Route path='/' exact component={Home} />
+      <Route path='/about' component={About} />
+    </HashRouter>
   )
-
-  render() {
-    const { isLoading, movieList } = this.state
-    return (
-      <section className={styles.container}>
-        {isLoading
-          ? (
-            <div className={styles.loader}>
-              <span className={styles.loader__text}>Loading...</span>
-            </div>
-          )
-          : (
-            <div className={styles.movies}>
-              {this.renderMovies(movieList)}
-            </div>
-          )}
-      </section>
-
-    )
-  }
 }
 
 export default App

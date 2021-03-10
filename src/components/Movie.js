@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './scss/Movie.module.scss'
+import styles from '../scss/Movie.module.scss'
 
 function Movie({
   year, title, summary, poster, genres
