@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import styles from '../scss/Movie.module.scss'
 
 function Movie({
-  year, title, summary, poster, genres
+  id, year, title, summary, poster, genres
 }) {
   return (
     <Link to={{
-      pathname: '/detail',
+      pathname: `/movie/${id}`,
       state: {
         year, title, summary, poster, genres
       }
